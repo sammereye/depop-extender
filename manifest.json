@@ -1,0 +1,18 @@
+{
+  "name": "Depop Product Info",
+  "manifest_version": 3,
+  "version": "1.0",
+  "description": "Shows more information for depop listings",
+  "permissions": ["scripting", "tabs", "cookies", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.depop.com/*"],
+      "js": ["script.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  }
+}
